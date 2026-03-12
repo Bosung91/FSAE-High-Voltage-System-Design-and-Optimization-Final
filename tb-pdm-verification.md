@@ -5,4 +5,4 @@
 ## Electrical Stress Testing
 ## DVP Amendments
 ---
-[Previous: PCDC Optimization](pcdc-optimization.md) | [Table of Contents](index.md) | [Next: HV Distribution Testing](hv-distribution-testing.md)
+[Previous: PCDC Optimization](pcdc-optimization.md) | [Table of Contents](README.md) | [Next: HV Distribution Testing](hv-distribution-testing.md)
