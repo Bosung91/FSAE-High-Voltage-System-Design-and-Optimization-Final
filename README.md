@@ -12,7 +12,7 @@ Semester 2 AY/2025/2026
 
 <b>Submitted by</b>
 
-<img src='./Figures/proflile pic.jpg' alt='profile pic' class='avatar'>
+<img src='./Figures/profile pic.jpg' alt='profile pic' class='avatar'>
 <br>
 <p>
 Suh Bosung (A0258007H)
