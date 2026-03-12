@@ -2,9 +2,9 @@
     <link rel='stylesheet' href='avatar.css'>
 </head>
 
-<center><img src='../Figures/NUS_logo_full-vertical.jpg'></center>  
+<center><img src='./Figures/NUS_logo_full-vertical.jpg'></center>  
 
-<center><img src='../Figures/NUS Formula SAE Logo.png'></center>  
+<center><img src='./Figures/NUS Formula SAE Logo.png'></center>  
 
 # **CDE4301 Final Report**
 ## FTS-433: FSAE High Voltage System Design and Optimization
@@ -12,7 +12,7 @@ Semester 2 AY/2025/2026
 
 <b>Submitted by</b>
 
-<img src='../Figures/proflile pic.jpg' alt='profile pic' class='avatar'>
+<img src='./Figures/proflile pic.jpg' alt='profile pic' class='avatar'>
 <br>
 <p>
 Suh Bosung (A0258007H)
