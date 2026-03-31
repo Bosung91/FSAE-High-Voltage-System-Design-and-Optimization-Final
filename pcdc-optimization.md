@@ -5,7 +5,7 @@
 Following the diagnosis from R25Evo that Precharge resistors failed due to insufficient heat dissipation, a controlled test was conducted to evaluate the thermal performance of two candidate resistors: a 1.5kΩ through-hole resistor (used in R25Evo) and a 3.3kΩ chassis mount resistor (proposed for R26E). The objective was to determine which resistor can reliably withstand the full Tractive System (TS) voltage range without exceeding its thermal limits.
 </p>
 
-<center><img src='./Figures/placeholder-resistor-test-setup.png'></center>
+<center><img src='./Figures/Resistor Test Setup.jpg'></center>
 <center><i>Figure 1: Resistor Test Setup</i></center>
 
 <br>
