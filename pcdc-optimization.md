@@ -14,37 +14,37 @@ Following the diagnosis from R25Evo that Precharge resistors failed due to insuf
 As shown in <i>Figure 1</i>, a thermistor (green arrow) was placed in direct contact with the resistor (blue arrow) to monitor temperature in real time. Each resistor was subjected to a Precharge cycle at incremental voltage levels from 50V to 360V (maximum TS voltage), and the temperature response was recorded over time.
 </p>
 
-<center><img src='./Figures/placeholder-temp-vs-time-50V.png'></center>
+<center><img src='./Figures/Temp vs Time 50V.png'></center>
 <center><i>Figure 2: Temperature vs. Time at 50V</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-temp-vs-time-100V.png'></center>
+<center><img src='./Figures/Temp vs Time 100V.png'></center>
 <center><i>Figure 3: Temperature vs. Time at 100V</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-temp-vs-time-150V.png'></center>
+<center><img src='./Figures/Temp vs Time 150V.png'></center>
 <center><i>Figure 4: Temperature vs. Time at 150V</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-temp-vs-time-200V.png'></center>
+<center><img src='./Figures/Temp vs Time 200V.png'></center>
 <center><i>Figure 5: Temperature vs. Time at 200V</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-temp-vs-time-250V.png'></center>
+<center><img src='./Figures/Temp vs Time 250V.png'></center>
 <center><i>Figure 6: Temperature vs. Time at 250V</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-temp-vs-time-300V.png'></center>
+<center><img src='./Figures/Temp vs Time 300V.png'></center>
 <center><i>Figure 7: Temperature vs. Time at 300V</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-temp-vs-time-360V.png'></center>
+<center><img src='./Figures/Temp vs Time 360V.png'></center>
 <center><i>Figure 8: Temperature vs. Time at 360V</i></center>
 
 <br>
@@ -58,7 +58,7 @@ Temperature rise was observed in the 1.5kΩ through-hole resistor starting from 
 During testing, the previously specced Accumulator Isolation Relays (AIRs), <b>Albright HV500</b>, did not latch even when the Shutdown Line was completed. Upon testing the relay independently using an external power supply, the pull-in current was found to be too high to be supplied by the Shutdown Line. The datasheet-derived pull-in current at 12V was 3A (27V ÷ 9Ω), and the measured actual pull-in current was 3.11A, as shown in <i>Figure 9</i>.
 </p>
 
-<center><img src='./Figures/placeholder-hv500-pull-in.png'></center>
+<center><img src='./Figures/Albright HV500 Pull-in Current.png'></center>
 <center><i>Figure 9: Albright HV500 Pull-in Current</i></center>
 
 <br>
@@ -67,7 +67,7 @@ During testing, the previously specced Accumulator Isolation Relays (AIRs), <b>A
 Another Isolation Relay used in a previous season, <b>KILOVAC EV200</b>, was tested as an alternative. Despite having a higher datasheet pull-in current of 3.8A at 12V, its actual measured pull-in current was only 0.34A, as shown in <i>Figure 10</i>, which was well within the Shutdown Line's current capacity.
 </p>
 
-<center><img src='./Figures/placeholder-ev200-pull-in.png'></center>
+<center><img src='./Figures/KILOVAC EV200 Pull-in Current.png'></center>
 <center><i>Figure 10: KILOVAC EV200 Pull-in Current</i></center>
 
 <br>
@@ -108,7 +108,7 @@ As shown in <i>Figure 11</i>, the KILOVAC EV200's actual pull-in current was sig
 After selecting the 3.3kΩ chassis mount resistor based on thermal testing, the actual power dissipation during a Precharge cycle was validated against the Electric Systems Form (ESF) calculated values. The Cascadia Inverter DC Bus Voltage was logged at 100Hz over time during a test run, and the trapezoidal method was used to compute the actual power dissipation.
 </p>
 
-<center><img src='./Figures/placeholder-inverter-dc-bus-voltage.png'></center>
+<center><img src='./Figures/Inverter DC Bus Voltage vs Time.png'></center>
 <center><i>Figure 12: Inverter DC Bus Voltage vs. Time</i></center>
 
 <br>
@@ -201,7 +201,7 @@ Potential reasons for the discrepancy between actual and ESF values are as follo
 Formula Society of Automotive Engineers (FSAE) rule EV.7.2.2 states that the discharge time (time taken for the Tractive System to reach below 60V) must be less than 5 seconds.
 </p>
 
-<center><img src='./Figures/placeholder-ev722-rule.png'></center>
+<center><img src='./Figures/EV.7.2.2.png'></center>
 <center><i>Figure 14: FSAE EV.7.2.2</i></center>
 
 <br>

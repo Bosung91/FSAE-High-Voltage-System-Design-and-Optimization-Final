@@ -6,7 +6,7 @@
 The 26 HV Distribution Printed Circuit Board (PCB) was tested to verify continuity across all Input/Output (IO) paths and to validate the design amendments made since the interim report. Continuity testing confirmed that <b>all IOs are continuous</b>, verifying the integrity of the PCB traces and solder joints across all branched HV paths.
 </p>
 
-<center><img src='./Figures/placeholder-26-hv-distribution-schematic.png'></center>
+<center><img src='./Figures/26 HV Distribution Schematic.png'></center>
 <center><i>Figure 25: 26 HV Distribution PCB Schematic</i></center>
 
 <br>
@@ -24,7 +24,7 @@ A fuse was added to the Manual Service Disconnect negative terminal (MSD-) condu
 The physical placement of connectors on the PCB was also rearranged to minimise the length of HV traces between the input and output connectors. Shorter HV paths reduce parasitic resistance and inductance, improving power delivery efficiency and reducing the risk of electromagnetic interference (EMI).
 </p>
 
-<center><img src='./Figures/placeholder-26-hv-distribution-3d.png'></center>
+<center><img src='./Figures/26 HV Distributin 3D Rendering.png'></center>
 <center><i>Figure 26: 26 HV Distribution PCB 3D Rendering</i></center>
 
 <br>

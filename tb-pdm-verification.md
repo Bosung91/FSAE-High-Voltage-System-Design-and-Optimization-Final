@@ -6,7 +6,7 @@
 As identified during R25Evo test runs, the Precharge signal oscillated due to a loose connection from the 25 Tractive Battery Power Distribution Module (TB PDM) to the Isolation Relay positive terminal (IR+), causing intermittent power loss mid drive. To verify the effectiveness of the redesigned 26 TB PDM with Hirose DF63 series connectors, the Precharge signal was logged during the most recent test run.
 </p>
 
-<center><img src='./Figures/placeholder-precharge-signal-logged.png'></center>
+<center><img src='./Figures/R26E Test Run Logged Data.png'></center>
 <center><i>Figure 15: Precharge Signal Logged Data from Most Recent Test Run</i></center>
 
 <br>
@@ -21,17 +21,17 @@ As shown in <i>Figure 15</i>, no fluctuation was observed in the Precharge signa
 Voltage drop testing was conducted across all signal and power paths on the 26 TB PDM to verify that the Printed Circuit Board (PCB) can efficiently distribute signals and power to the systems connected to it. An external power supply was configured at 12V and 3A to simulate the Grounded Low Voltage (GLV) power source, as shown in <i>Figure 16</i>.
 </p>
 
-<center><img src='./Figures/placeholder-external-power-supply.png'></center>
+<center><img src='./Figures/External Power Supply Setup (Channel 1).jpg'></center>
 <center><i>Figure 16: External Power Supply Setup (Channel 1)</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-26-tb-pdm-schematic.png'></center>
+<center><img src='./Figures/26 TB PDM Schematic.jpg'></center>
 <center><i>Figure 17: 26 TB PDM Schematic</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-voltage-drop-test-setup.png'></center>
+<center><img src='./Figures/IO Voltage Drop Test Setup.jpg'></center>
 <center><i>Figure 18: Voltage Drop Test Setup</i></center>
 
 <br>
@@ -120,17 +120,17 @@ A consistent voltage drop of 0.3V was observed across all paths that have rectif
 To verify the effectiveness of the rectifier diodes in protecting the GLV battery, a reversed 12V polarity test was conducted on the power output paths. The external power supply polarity was reversed and the output voltage at each protected path was measured.
 </p>
 
-<center><img src='./Figures/placeholder-bms-ready-reversed.png'></center>
+<center><img src='./Figures/BMS Ready Reversed Polarity.jpg'></center>
 <center><i>Figure 20: BMS Ready Reversed Polarity</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-therm-pwr-reversed.png'></center>
+<center><img src='./Figures/THERM PWR Reversed Polarity.jpg'></center>
 <center><i>Figure 21: THERM PWR Reversed Polarity</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-fan-pwr-reversed.png'></center>
+<center><img src='./Figures/FAN PWR Reversed Polarity.jpg'></center>
 <center><i>Figure 22: FAN PWR Reversed Polarity</i></center>
 
 <br>
@@ -145,12 +145,12 @@ As shown in <i>Figures 20 to 22</i>, the TB PDM's reverse polarity protection is
 Shutdown Line diagnostic Light Emitting Diodes (LEDs) were added to the 26 TB PDM to provide visual feedback on the status of each Shutdown Line component. Each LED corresponds to a specific Shutdown Line node and lights up when there is no fault detected at that node. The Shutdown Line components monitored by the diagnostic LEDs are: Tractive Battery (TB) Charger, Interlock, IR+, IR-, Manual Service Disconnect (MSD), Precharge-Discharge, and Tractive System Measuring Point (TSMP).
 </p>
 
-<center><img src='./Figures/placeholder-r26e-testbench.png'></center>
+<center><img src='./Figures/R26E Testbench.jpg'></center>
 <center><i>Figure 23: R26E Testbench</i></center>
 
 <br>
 
-<center><img src='./Figures/placeholder-26-tb-pdm-sdl-leds.png'></center>
+<center><img src='./Figures/26 TB PDM SDL LEDs.jpg'></center>
 <center><i>Figure 24: 26 TB PDM Shutdown Line LEDs</i></center>
 
 <br>
