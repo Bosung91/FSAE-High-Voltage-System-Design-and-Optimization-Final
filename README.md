@@ -8,7 +8,7 @@
 
 # **CDE4301 Final Report**
 ## FTS-433: FSAE High Voltage System Design and Optimization
-Semester 2 AY/2025/2026
+AY2025/2026
 
 <b>Submitted by</b>
 
@@ -21,12 +21,15 @@ Suh Bosung (A0258007H)
 **Supervisor** Mr. Lim Hong Wee  
 
 ## Table of Contents
-1. [Precharge-Discharge PCB (PCDC) Optimization](pcdc-optimization.md)
-    1. [Precharge Resistor Testing Methodology](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/pcdc-optimization.html#testing-methodology)
-    2. [Isolation Relay Troubleshooting & Selection](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/pcdc-optimization.html#isolation-relay-ir-troubleshooting--selection)
-    3. [Power Dissipation Analysis (Actual vs. ESF)](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/pcdc-optimization.html#power-dissipation-analysis)
-    4. [Precharge Sequence Timing vs. FSAE Safety Requirements](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/pcdc-optimization.html#precharge-sequence-timing)
-2. [Tractive Battery PDM (TB PDM) Verification](tb-pdm-verification.md)
-    1. [Electrical Stress, Continuity, and Load Testing](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/tb-pdm-verification.html#electrical-stress-testing)
-3. [High Voltage (HV) Distribution Stress Testing](hv-distribution-testing.md)
-    1. [Design Amendments](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/hv-distribution-testing.html#design-amendments)
+[List of Abbreviations](list-of-abbrev.md)
+1. [Introduction](introduction.md)
+2. [Objective and Scope](objective-and-scope.md)
+3. [Context of Problem](context-of-problem.md)
+4. [R25Evo](r25evo.md)
+5. [Precharge-Discharge PCB (PCDC) Optimization](pcdc-optimization.md)
+6. [Tractive Battery PDM (TB PDM) Verification](tb-pdm-verification.md)
+7. [High Voltage (HV) Distribution PCB](hv-distribution-testing.md)
+8. [Shortcomings](shortcomings.md)
+9. [Future Work](future-work.md)
+10. [References](references.md)
+11. [Appendix](appendix.md)
