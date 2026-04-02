@@ -214,12 +214,12 @@ Based on the comprehensive testing conducted, the <b>3.3kΩ chassis mount resist
 Based on the resistor selection results, the 26 Precharge-Discharge PCB design was iterated to replace the 1.5kΩ through-hole resistors with 3.3kΩ chassis mount resistors. The chassis mount form factor allows the heat sinks to be directly mounted onto the resistors, eliminating the thermal insulation issue caused by the PCB layers that led to the R25Evo failure. <i>Figures 25 and 26</i> show the front and rear views of the final iterated PCB.
 </p>
 
-<center><img src='./Figures/26 Precharge-Discharge PCB Final Version Front View.png'></center>
+<center><img src='./Figures/26 PCDC Final Version Front View.png'></center>
 <center><i>Figure 25: 26 Precharge-Discharge PCB Final Version Front View</i></center>
 
 <br>
 
-<center><img src='./Figures/26 Precharge-Discharge PCB Final Version Rear View.png'></center>
+<center><img src='./Figures/26 PCDC Final Version Rear View.png'></center>
 <center><i>Figure 26: 26 Precharge-Discharge PCB Final Version Rear View</i></center>
 
 ---
