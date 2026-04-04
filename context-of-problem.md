@@ -26,7 +26,7 @@ The data revealed a peak current of 234.6A, peak power of 66.32kW, a current ram
 
 ## Transition to CM200DX
 <p style='text-align: justify'>
-Due to <b>BAMOCAR</b>'s limited current ramp rate, the team decided to use <b>CM200DX</b> for R26E due to its superior performance. For detailed justification, refer to <a href='https://niikhilesh.github.io/Cascadia-System-Integration-HV-and-LV/' target='_blank'>FTS 435 Cascadia System Integration (HV & LV)</a>.
+Due to <b>BAMOCAR</b>'s limited current ramp rate, the team decided to use <b>CM200DX</b> for R26E due to its superior performance. For detailed justification, refer to <a href='https://niikhilesh.github.io/System-Integration-and-Optimization-of-the-CM200DX/' target='_blank'>FTS 435 Cascadia System Integration (HV & LV)</a>.
 </p>
 
 ---
