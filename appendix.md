@@ -156,12 +156,12 @@ Placing the heat sink on the surface opposite to the precharge resistors is as i
 <br>
 
 <center><img src='./Figures/Precharge Signal_Abnormal.png'></center>
-<center>Abnormal Precharge Signal (R25Evo)</center>
+<center>Abnormal Precharge Signal (R25Evo, Blue Curve)</center>
 
 <br>
 
 <center><img src='./Figures/Precharge Signal_Normal.png'></center>
-<center>Normal Precharge Signal</center>
+<center>Normal Precharge Signal (Blue Curve)</center>
 
 ## D
 ### 26 PCDC PCB Component Calculations, Simulation, and Transient Analysis
