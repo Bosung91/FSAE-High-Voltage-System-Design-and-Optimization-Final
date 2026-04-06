@@ -61,16 +61,20 @@ body {
   position: relative;
   /* bleed to edges of main-content padding */
   margin: -32px -24px 28px;
-  height: 78vh;
-  min-height: 360px;
+  height: 91vh;
+  min-height: 420px;
   overflow: hidden;
+  background: #000;
 }
 
 .hero-slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  /* contain: show the full car render; black bg fills any letterbox bars */
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  background-color: #000;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
@@ -413,8 +417,8 @@ body {
   }
   .hero {
     margin: 0 -12px 20px;
-    height: 55vh;
-    min-height: 280px;
+    height: 72vh;
+    min-height: 300px;
   }
   .hero-title { font-size: 1.15rem; }
   .content-card {
