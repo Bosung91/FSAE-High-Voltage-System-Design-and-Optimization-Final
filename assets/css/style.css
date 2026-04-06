@@ -59,8 +59,9 @@ body {
    ============================================================ */
 .hero {
   position: relative;
-  /* bleed to edges of main-content padding */
-  margin: -32px -24px 28px;
+  /* align with content-card (same 920px max-width, centered) */
+  max-width: 920px;
+  margin: -32px auto 28px;
   /* height driven by image aspect ratio (2795×2160 ≈ 1.294:1),
      capped so it doesn't overflow the viewport */
   aspect-ratio: 2795 / 2160;
@@ -425,7 +426,7 @@ body {
     padding: 0 12px 32px;
   }
   .hero {
-    margin: 0 -12px 20px;
+    margin: 0 auto 20px;
     /* on narrow mobile, full aspect-ratio height is too tall; cap it */
     max-height: 75vw;
   }
