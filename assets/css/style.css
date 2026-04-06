@@ -7,7 +7,7 @@
 
   /* dark */
   --bg-overlay:    rgba(5, 10, 20, 0.62);
-  --card-bg:       rgba(12, 18, 32, 0.88);
+  --card-bg:       rgba(12, 18, 32, 0.78);
   --sidebar-bg:    rgba(8, 13, 26, 0.96);
   --topbar-bg:     rgba(8, 13, 26, 0.93);
   --text:          #dce8f5;
@@ -24,7 +24,7 @@
 
 [data-theme="light"] {
   --bg-overlay:   rgba(220, 235, 255, 0.70);
-  --card-bg:      rgba(255, 255, 255, 0.93);
+  --card-bg:      rgba(255, 255, 255, 0.83);
   --sidebar-bg:   rgba(242, 247, 255, 0.97);
   --topbar-bg:    rgba(242, 247, 255, 0.95);
   --text:         #0d1b2a;
