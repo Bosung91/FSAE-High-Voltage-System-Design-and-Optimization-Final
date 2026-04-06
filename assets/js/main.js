@@ -88,38 +88,42 @@ document.getElementById('sidebarBackdrop').addEventListener('click', function ()
 })();
 
 /* ============================================================
-   Search
+   Search — page index (hardcoded; avoids Jekyll circular deps)
    ============================================================ */
+var BASE = '/FSAE-High-Voltage-System-Design-and-Optimization-Final';
+var PAGES = [
+  { title: 'Home',                   url: BASE + '/',                      desc: 'CDE4301 Final Report — FTS-433 FSAE High Voltage System Design and Optimization' },
+  { title: 'List of Abbreviations',  url: BASE + '/list-of-abbrev',        desc: 'IMD, IR, BMS, ECU, FSAE, HV, LV, MSD, PDM, PCB, TB, TSMP, TSMS' },
+  { title: 'Introduction',           url: BASE + '/introduction',          desc: 'NUS Formula SAE team, R26E, EDIC, 27 team members' },
+  { title: 'Objective and Scope',    url: BASE + '/objective-and-scope',   desc: 'HV department goal, CM200DX, R25Evo, timeline, testbench, Precharge sequence' },
+  { title: 'Context of Problem',     url: BASE + '/context-of-problem',    desc: 'Tractive system, BAMOCAR, CM200DX, peak current, acceleration' },
+  { title: 'R25Evo',                 url: BASE + '/r25evo',                desc: 'Precharge resistor failure, burnt, heat sink, PCB connectors, signal oscillation' },
+  { title: 'PCDC Optimization',      url: BASE + '/pcdc-optimization',     desc: 'Precharge-Discharge PCB, RC delay, PMOS, MOV, chassis mount resistor, 3.3kΩ, Hirose, Isolation Relay, KILOVAC EV200, Albright HV500, power dissipation, thermal' },
+  { title: 'TB PDM Verification',    url: BASE + '/tb-pdm-verification',   desc: 'Tractive Battery PDM, Hirose DF63, voltage drop, reversed polarity, Shutdown Line LEDs, diagnostics' },
+  { title: 'HV Distribution PCB',    url: BASE + '/hv-distribution-testing', desc: 'HV distribution, fuses, Littelfuse, AWG 22, Tefzel, continuity, IEC EV6.6.6' },
+  { title: 'Shortcomings',           url: BASE + '/shortcomings',          desc: 'ESF model accuracy, temperature monitoring, SPICE simulation validation' },
+  { title: 'Future Work',            url: BASE + '/future-work',           desc: 'R26E test run, ESF model refinement, thermistor, Hirose connectors' },
+  { title: 'References',             url: BASE + '/references',            desc: 'Hirose, Littelfuse, PROWIREUSA, FTS 435 Cascadia, Kasemsadeh' },
+  { title: 'Appendix',               url: BASE + '/appendix',              desc: 'R25Evo resistor calculations, thermal conductivity, Precharge logic, component calculations, power analysis' }
+];
+
 function doSearch(q) {
   var box = document.getElementById('searchResults');
-  q = q.trim();
-  if (q.length < 2) {
-    box.classList.remove('open');
-    box.innerHTML = '';
-    return;
-  }
+  q = (q || '').trim();
+  if (q.length < 2) { box.classList.remove('open'); box.innerHTML = ''; return; }
   var ql = q.toLowerCase();
-  var hits = (window.PAGES || []).filter(function (p) {
-    return (p.title && p.title.toLowerCase().includes(ql)) ||
-           (p.excerpt && p.excerpt.toLowerCase().includes(ql));
-  }).slice(0, 8);
-
+  var hits = PAGES.filter(function (p) {
+    return p.title.toLowerCase().includes(ql) || p.desc.toLowerCase().includes(ql);
+  });
   if (!hits.length) {
     box.innerHTML = '<div class="sr-empty">No results found.</div>';
   } else {
     box.innerHTML = hits.map(function (p) {
-      var snip = '';
-      if (p.excerpt) {
-        var idx = p.excerpt.toLowerCase().indexOf(ql);
-        if (idx >= 0) {
-          snip = '\u2026' + p.excerpt.substring(Math.max(0, idx - 35), idx + 90) + '\u2026';
-        } else {
-          snip = p.excerpt.substring(0, 110) + '\u2026';
-        }
-      }
-      return '<a class="sr-item" href="' + p.url + '">' +
-             '<strong>' + (p.title || 'Page') + '</strong>' +
-             '<span>' + snip + '</span></a>';
+      var idx = p.desc.toLowerCase().indexOf(ql);
+      var snip = idx >= 0
+        ? '\u2026' + p.desc.substring(Math.max(0, idx - 30), idx + 80) + '\u2026'
+        : p.desc.substring(0, 100) + '\u2026';
+      return '<a class="sr-item" href="' + p.url + '"><strong>' + p.title + '</strong><span>' + snip + '</span></a>';
     }).join('');
   }
   box.classList.add('open');
@@ -128,6 +132,6 @@ function doSearch(q) {
 document.addEventListener('click', function (e) {
   if (!e.target.closest('.search-wrap')) {
     var box = document.getElementById('searchResults');
-    if (box) { box.classList.remove('open'); }
+    if (box) box.classList.remove('open');
   }
 });
