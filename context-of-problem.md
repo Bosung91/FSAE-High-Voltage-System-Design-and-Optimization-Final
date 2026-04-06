@@ -1,3 +1,8 @@
+---
+layout: default
+title: Context of Problem
+---
+
 # Context of Problem
 
 ## Overview of Tractive System

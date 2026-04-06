@@ -1,3 +1,8 @@
+---
+layout: default
+title: References
+---
+
 # References
 - <a href='https://drive.google.com/file/d/1I35mYJ_RM4V20GFdI0O64CSFCwSgdaJc/view?usp=drive_link' target='_blank'>Kasemsadeh, Heng, Ashara, 2019: Temperature sensors: PCB guidelines for surface mount devices.</a>
 - <a href='https://drive.google.com/file/d/10Ltabzmpp26rV4KXxHFZl8xF2f_CsPVx/view?usp=sharing' target='_blank'>Hirose, 2025: DF63 Series 15A 3.96mm pitch Wire-to-Board Connectors for Internal Power Supply (UL, C-UL and TÜV Listed)</a>

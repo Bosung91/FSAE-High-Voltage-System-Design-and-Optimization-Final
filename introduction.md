@@ -1,3 +1,8 @@
+---
+layout: default
+title: Introduction
+---
+
 # Introduction
 
 ## NUS Formula SAE Team

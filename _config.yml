@@ -1,0 +1,6 @@
+title: FSAE HV System Design & Optimization
+baseurl: "/FSAE-High-Voltage-System-Design-and-Optimization-Final"
+url: "https://bosung91.github.io"
+markdown: kramdown
+kramdown:
+  input: GFM

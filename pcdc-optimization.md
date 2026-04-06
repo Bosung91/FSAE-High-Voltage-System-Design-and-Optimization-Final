@@ -1,3 +1,8 @@
+---
+layout: default
+title: PCDC Optimization
+---
+
 # Precharge-Discharge PCB (PCDC) Optimization
 
 ## Design
@@ -221,6 +226,25 @@ Based on the resistor selection results, the 26 Precharge-Discharge PCB design w
 
 <center><img src='./Figures/26 PCDC Final Version Rear View.png'></center>
 <center><i>Figure 26: 26 Precharge-Discharge PCB Final Version Rear View</i></center>
+
+## Board Validation Testing
+<p style='text-align: justify'>
+The finalized 26 Precharge-Discharge PCB was subjected to bench validation testing using the built-in test points to verify that the board operates as designed. As shown in <i>Figure 27</i>, a Keysight EDUX1052G oscilloscope was used alongside a dual-channel Keysight bench power supply to simulate the 12V control signal and monitor switching waveforms at the test points. This allowed the RC delay timing, PMOS gate drive behavior, and relay switching sequence to be verified against the design specification without requiring a full tractive system setup.
+</p>
+
+<center><img src='./Figures/26 PCDC Testing using Built-in Test Points.jpg'></center>
+<center><i>Figure 27: 26 Precharge-Discharge PCB Validation Test Setup</i></center>
+
+<br>
+
+<p style='text-align: justify'>
+During a subsequent test run on the vehicle, a precharge fault was traced to a loose precharge resistor connection. As shown in <i>Figure 28</i>, the wire terminal at the resistor had completely backed out of the connector, resulting in an open circuit in the precharge path. The root cause was identified as vibration and shock from the vehicle during dynamic testing, which caused the crimped wire lug to work loose from the terminal. This finding validated the decision to specify Hirose DF63 connectors on the PCDC board for their vibration-resistant locking mechanism; however, it also highlighted that the external wiring between the board connector and the chassis-mount resistors requires equal attention to strain relief and positive locking mechanism during assembly.
+</p>
+
+<center><img src='./Figures/Disconnected Precharge Resistor due to Vibration and Shock.jpg'></center>
+<center><i>Figure 28: Precharge Resistor Connection Loosened by Vibration and Shock</i></center>
+
+<br>
 
 ---
 [Previous Section: R25Evo](r25evo.md) | [Table of Contents](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/#table-of-contents) | [Next: TB PDM Verification](tb-pdm-verification.md)

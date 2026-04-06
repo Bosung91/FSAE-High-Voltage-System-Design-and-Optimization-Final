@@ -1,3 +1,8 @@
+---
+layout: default
+title: R25Evo
+---
+
 # R25Evo
 <p style='text-align: justify'>
 This section discusses the issues faced in the HV system during R25Evo test runs that informed the design changes for R26E.

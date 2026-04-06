@@ -1,3 +1,8 @@
+---
+layout: default
+title: Objective and Scope
+---
+
 # Objective and Scope
 
 ## High Voltage Department Goal

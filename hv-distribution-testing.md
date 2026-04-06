@@ -1,3 +1,8 @@
+---
+layout: default
+title: HV Distribution PCB
+---
+
 # High Voltage (HV) Distribution PCB
 
 ## Design
@@ -15,7 +20,7 @@ The 26 HV Distribution PCB was tested to verify continuity across all Input/Outp
 </p>
 
 <center><img src='./Figures/26 HV Distribution Schematic.png'></center>
-<center><i>Figure 38: 26 HV Distribution PCB Schematic</i></center>
+<center><i>Figure 40: 26 HV Distribution PCB Schematic</i></center>
 
 <br>
 
@@ -24,7 +29,7 @@ Based on further review of the HV distribution architecture, a fuse was added to
 </p>
 
 <center><img src='./Figures/26 HV Distributin 3D Rendering.png'></center>
-<center><i>Figure 39: 26 HV Distribution PCB 3D Rendering</i></center>
+<center><i>Figure 41: 26 HV Distribution PCB 3D Rendering</i></center>
 
 <br>
 

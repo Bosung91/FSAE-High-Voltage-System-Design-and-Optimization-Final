@@ -1,6 +1,7 @@
-<head>
-    <link rel='stylesheet' href='avatar.css'>
-</head>
+---
+layout: default
+title: Home
+---
 
 <center><img src='./Figures/NUS_logo_full-vertical.jpg'></center>  
 

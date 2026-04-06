@@ -1,3 +1,8 @@
+---
+layout: default
+title: List of Abbreviations
+---
+
 # List of Abbreviations
 
 <style type="text/css">

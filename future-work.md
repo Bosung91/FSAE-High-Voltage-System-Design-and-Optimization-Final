@@ -1,3 +1,8 @@
+---
+layout: default
+title: Future Work
+---
+
 # Future Work
 
 ## R26E Test Run
