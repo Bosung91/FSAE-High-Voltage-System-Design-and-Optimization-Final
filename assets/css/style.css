@@ -6,10 +6,10 @@
   --topbar-h: 54px;
 
   /* dark */
-  --bg-overlay:    rgba(5, 10, 20, 0.62);
-  --card-bg:       rgba(12, 18, 32, 0.78);
-  --sidebar-bg:    rgba(8, 13, 26, 0.96);
-  --topbar-bg:     rgba(8, 13, 26, 0.93);
+  --body-bg:       #070d1c;
+  --card-bg:       #0e1628;
+  --sidebar-bg:    rgba(8, 13, 26, 0.97);
+  --topbar-bg:     rgba(8, 13, 26, 0.94);
   --text:          #dce8f5;
   --text-muted:    #7a9ab5;
   --accent:        #00b4d8;
@@ -23,8 +23,8 @@
 }
 
 [data-theme="light"] {
-  --bg-overlay:   rgba(220, 235, 255, 0.70);
-  --card-bg:      rgba(255, 255, 255, 0.83);
+  --body-bg:      #e8f0ff;
+  --card-bg:      #ffffff;
   --sidebar-bg:   rgba(242, 247, 255, 0.97);
   --topbar-bg:    rgba(242, 247, 255, 0.95);
   --text:         #0d1b2a;
@@ -50,19 +50,23 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   color: var(--text);
   min-height: 100vh;
-  transition: color 0.3s;
+  background: var(--body-bg);
+  transition: color 0.3s, background 0.3s;
 }
 
 /* ============================================================
-   Background Slideshow
+   Hero — full-width car render slideshow above content
    ============================================================ */
-.bg-slideshow {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
+.hero {
+  position: relative;
+  /* bleed to edges of main-content padding */
+  margin: -32px -24px 28px;
+  height: 78vh;
+  min-height: 360px;
+  overflow: hidden;
 }
 
-.bg-slide {
+.hero-slide {
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -70,14 +74,60 @@ body {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
-.bg-slide.active { opacity: 1; }
+.hero-slide.active { opacity: 1; }
 
-.bg-overlay {
-  position: fixed;
+/* Very light overlay — just enough for text, not enough to hide the car */
+.hero-overlay {
+  position: absolute;
   inset: 0;
-  z-index: -1;
-  background: var(--bg-overlay);
-  transition: background 0.4s;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08) 0%,
+    rgba(0,0,0,0.12) 55%,
+    rgba(0,0,0,0.55) 100%
+  );
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 52px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hero-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+}
+.hero-sub {
+  font-size: 0.88rem;
+  opacity: 0.82;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  animation: hero-bounce 2.2s ease-in-out infinite;
+}
+
+@keyframes hero-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
 }
 
 /* ============================================================
@@ -272,8 +322,6 @@ body {
   max-width: 920px;
   margin: 0 auto;
   border: 1px solid var(--border);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   transition: background 0.3s;
 }
 
@@ -359,10 +407,16 @@ body {
   .sidebar.open {
     transform: translateX(0);
   }
-  /* On mobile the sidebar overlays; main content always full width */
   .main-content {
     margin-left: 0 !important;
+    padding: 0 12px 32px;
   }
+  .hero {
+    margin: 0 -12px 20px;
+    height: 55vh;
+    min-height: 280px;
+  }
+  .hero-title { font-size: 1.15rem; }
   .content-card {
     padding: 22px 18px;
   }

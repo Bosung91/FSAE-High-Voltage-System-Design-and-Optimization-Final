@@ -74,10 +74,10 @@ document.getElementById('sidebarBackdrop').addEventListener('click', function ()
 })();
 
 /* ============================================================
-   Background Slideshow
+   Hero Slideshow
    ============================================================ */
 (function () {
-  var slides = document.querySelectorAll('.bg-slide');
+  var slides = document.querySelectorAll('.hero-slide');
   if (!slides.length) return;
   var cur = 0;
   setInterval(function () {
