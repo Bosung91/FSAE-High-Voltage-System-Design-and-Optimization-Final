@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+permalink: /
 ---
 
 <center><img src='./Figures/NUS_logo_full-vertical.jpg'></center>  
