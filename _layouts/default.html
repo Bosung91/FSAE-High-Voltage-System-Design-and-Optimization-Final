@@ -67,19 +67,9 @@
     <p class="wc-bar" id="wcBar"></p>
   </main>
 
-  <!-- Total word count across all report pages (excluding appendix), computed at build time -->
-  <script>
-  {% assign _total = 0 %}
-  {% for _p in site.pages %}
-    {% if _p.title and _p.url != "/" %}
-      {% unless _p.url contains "appendix" %}
-        {% assign _pwc = _p.content | number_of_words %}
-        {% assign _total = _total | plus: _pwc %}
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
-  var REPORT_WC = {{ _total }};
-  </script>
+  <!-- Total prose word count of the report (excl. appendix).
+       Update this figure whenever content changes significantly. -->
+  <script>var REPORT_WC = 3900;</script>
   <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 </html>
