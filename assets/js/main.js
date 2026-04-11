@@ -137,13 +137,11 @@ document.addEventListener('click', function (e) {
 });
 
 /* ============================================================
-   Word count
+   Word count — total across all report pages, computed at build
+   time by Jekyll and injected as REPORT_WC
    ============================================================ */
 (function () {
-  var card = document.querySelector('.content-card');
-  var bar  = document.getElementById('wcBar');
-  if (!card || !bar) return;
-  var text  = card.innerText || card.textContent || '';
-  var count = text.trim().split(/\s+/).filter(function (w) { return w.length > 0; }).length;
-  bar.textContent = count.toLocaleString() + ' words';
+  var bar = document.getElementById('wcBar');
+  if (!bar || typeof REPORT_WC === 'undefined') return;
+  bar.textContent = 'Total report: ' + REPORT_WC.toLocaleString() + ' words';
 })();

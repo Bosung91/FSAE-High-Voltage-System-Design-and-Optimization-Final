@@ -15,7 +15,7 @@
 
   <!-- ── Sidebar ── -->
   <nav class="sidebar" id="sidebar" aria-label="Site navigation">
-    <div class="sidebar-brand">NUS Formula SAE</div>
+    <div class="sidebar-brand"><a href="https://www.nusformulasae.com" target="_blank" rel="noopener">NUS Formula SAE</a></div>
     <ul class="nav-links">
       <li><a href="{{ site.baseurl }}/">Home</a></li>
       <li><a href="{{ site.baseurl }}/list-of-abbrev">Abbreviations</a></li>
@@ -67,6 +67,19 @@
     <p class="wc-bar" id="wcBar"></p>
   </main>
 
+  <!-- Total word count across all report pages (excluding appendix), computed at build time -->
+  <script>
+  {% assign _total = 0 %}
+  {% for _p in site.pages %}
+    {% if _p.title and _p.url != "/" %}
+      {% unless _p.url contains "appendix" %}
+        {% assign _pwc = _p.content | number_of_words %}
+        {% assign _total = _total | plus: _pwc %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  var REPORT_WC = {{ _total }};
+  </script>
   <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 </html>
