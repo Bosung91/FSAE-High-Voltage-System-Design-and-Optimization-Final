@@ -28,7 +28,7 @@ The 26 HV Distribution PCB was tested to verify continuity across all Input/Outp
 Based on further review of the HV distribution architecture, a fuse was added to the MSD negative terminal (MSD-) conductor as an extra layer of safety, providing redundant overcurrent protection on the negative HV path. The physical placement of connectors on the PCB was also rearranged to minimise the length of HV traces, reducing parasitic resistance, inductance, and the risk of electromagnetic interference (EMI).
 </p>
 
-<center><img src='./Figures/26 HV Distributin 3D Rendering.png'></center>
+<center><img src='./Figures/26 HV Distribution 3D Rendering.png'></center>
 <center><i>Figure 41: 26 HV Distribution PCB 3D Rendering</i></center>
 
 <br>
