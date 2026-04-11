@@ -39,7 +39,7 @@ Following the diagnosis from R25Evo that Precharge resistors failed due to insuf
 <br>
 
 <p style='text-align: justify'>
-As shown in <i>Figure 11</i>, a thermistor (green arrow) was placed in direct contact with the resistor (blue arrow) to monitor temperature in real time. Each resistor was subjected to a Precharge cycle at incremental voltage levels from 50V to 360V (maximum TS voltage), and the temperature response was recorded over time. Each test was conducted for 30 seconds, which is double the minimum 15-second duration required by FSAE rule EV.5.6.3. This rule states that the discharge circuit must be designed to handle the maximum tractive system voltage for a minimum of 15 seconds. Testing at double the required duration provides a safety margin and ensures the resistor can sustain prolonged exposure to HV without thermal failure.
+As shown in <i>Figure 11</i>, a thermistor (green arrow) was placed in direct contact with the resistor (blue arrow) to monitor temperature in real time. Each resistor was subjected to a Precharge cycle at incremental voltage levels from 50V to 356V (maximum TS voltage), and the temperature response was recorded over time. Each test was conducted for 30 seconds, which is double the minimum 15-second duration required by FSAE rule EV.5.6.3. This rule states that the discharge circuit must be designed to handle the maximum tractive system voltage for a minimum of 15 seconds. Testing at double the required duration provides a safety margin and ensures the resistor can sustain prolonged exposure to HV without thermal failure.
 </p>
 
 <center><img src='./Figures/Temp vs Time 50V.png'></center>
@@ -73,12 +73,12 @@ As shown in <i>Figure 11</i>, a thermistor (green arrow) was placed in direct co
 <br>
 
 <center><img src='./Figures/Temp vs Time 360V.png'></center>
-<center><i>Figure 18: Temperature vs. Time at 360V</i></center>
+<center><i>Figure 18: Temperature vs. Time at 356V</i></center>
 
 <br>
 
 <p style='text-align: justify'>
-Temperature rise was observed in the 1.5kΩ through-hole resistor starting from 100V, while the 3.3kΩ chassis mount resistor remained at ambient temperature up to 250V. The maximum temperature reached by the 1.5kΩ through-hole resistor was 86°C at 250V. The 1.5kΩ through-hole resistor <b>failed at 300V</b>, which is significantly lower than its datasheet rated voltage of 700V, confirming the findings from R25Evo that the failure was caused by insufficient heat dissipation rather than electrical overspeccing. In contrast, the 3.3kΩ chassis mount resistor continued to perform at 360V (maximum TS voltage) with only a <b>10°C temperature rise</b>. The 3.3kΩ chassis mount resistor was therefore selected as the Precharge resistor for R26E.
+Temperature rise was observed in the 1.5kΩ through-hole resistor starting from 100V, while the 3.3kΩ chassis mount resistor remained at ambient temperature up to 250V. The maximum temperature reached by the 1.5kΩ through-hole resistor was 86°C at 250V. The 1.5kΩ through-hole resistor <b>failed at 300V</b>, which is significantly lower than its datasheet rated voltage of 700V, confirming the findings from R25Evo that the failure was caused by insufficient heat dissipation rather than electrical overspeccing. In contrast, the 3.3kΩ chassis mount resistor continued to perform at 356V (maximum TS voltage) with only a <b>10°C temperature rise</b>. The 3.3kΩ chassis mount resistor was therefore selected as the Precharge resistor for R26E.
 </p>
 
 ### Isolation Relay (IR) Troubleshooting & Selection
@@ -227,7 +227,7 @@ FSAE rule EV.7.2.2 states that the discharge time must be less than 5 seconds.
 
 ## Resistor Selection
 <p style='text-align: justify'>
-Based on the comprehensive testing conducted, the <b>3.3kΩ chassis mount resistor</b> has been selected as the Precharge resistor for R26E. It demonstrated thermal stability with only a 10°C temperature rise at 360V, compared to the 1.5kΩ candidate which failed at 300V — below the maximum TS voltage of 356V, confirming it could not pass the maximum TS voltage test. Its actual average power dissipation of 16.62W is within the 20W continuous rating, the discharge time of 4.29s satisfies EV.7.2.2, and the chassis mount form factor enables direct thermal coupling to a heat sink, addressing the root cause of R25Evo's failure.
+Based on the comprehensive testing conducted, the <b>3.3kΩ chassis mount resistor</b> has been selected as the Precharge resistor for R26E. It demonstrated thermal stability with only a 10°C temperature rise at 356V, compared to the 1.5kΩ candidate which failed at 300V — below the maximum TS voltage of 356V, confirming it could not pass the maximum TS voltage test. Its actual average power dissipation of 16.62W is within the 20W continuous rating, the discharge time of 4.29s satisfies EV.7.2.2, and the chassis mount form factor enables direct thermal coupling to a heat sink, addressing the root cause of R25Evo's failure.
 </p>
 
 <p style='text-align: justify'>
