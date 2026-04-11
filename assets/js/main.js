@@ -135,3 +135,15 @@ document.addEventListener('click', function (e) {
     if (box) box.classList.remove('open');
   }
 });
+
+/* ============================================================
+   Word count
+   ============================================================ */
+(function () {
+  var card = document.querySelector('.content-card');
+  var bar  = document.getElementById('wcBar');
+  if (!card || !bar) return;
+  var text  = card.innerText || card.textContent || '';
+  var count = text.trim().split(/\s+/).filter(function (w) { return w.length > 0; }).length;
+  bar.textContent = count.toLocaleString() + ' words';
+})();
