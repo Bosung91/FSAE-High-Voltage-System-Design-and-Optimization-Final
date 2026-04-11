@@ -64,10 +64,10 @@ document.getElementById('sidebarBackdrop').addEventListener('click', function ()
 
 // Mark active nav link
 (function () {
-  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  var path = window.location.pathname.replace(/\/$/, '').replace(/\.html$/, '') || '/';
   document.querySelectorAll('.nav-links a').forEach(function (a) {
-    var href = a.getAttribute('href').replace(/\/$/, '') || '/';
-    if (path === href || path.endsWith(href) && href !== '/') {
+    var href = a.getAttribute('href').replace(/\/$/, '').replace(/\.html$/, '') || '/';
+    if (path === href || (path.endsWith(href) && href !== '/')) {
       a.classList.add('active');
     }
   });

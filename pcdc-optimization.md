@@ -16,7 +16,7 @@ Based on FSAE rules EV.5.6 and EV.7.2 and lessons learned from R25Evo, the 26 Pr
 <br>
 
 <p style='text-align: justify'>
-The key design changes include: Resistor-Capacitor (RC) delay circuits to control relay opening sequence during faults, a PMOS-based high-side switch for the Precharge Relay, a Metal Oxide Varistor (MOV) to protect the Discharge Relay from inductive spikes, and chassis mount TO-247 resistors with directly mounted aluminium heat sinks for effective cooling. Hirose DF63 series connectors rated for 630VDC were selected for vibration-resistant connections. Refer to <a href='https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/appendix.html#d' target='_blank'>Appendix D</a> for component calculations, simulation setup and truth table.
+The key design changes include: Resistor-Capacitor (RC) delay circuits to control relay opening sequence during faults, a PMOS-based high-side switch for the Precharge Relay, a Metal Oxide Varistor (MOV) to protect the Discharge Relay from inductive spikes, and chassis mount TO-247 resistors with directly mounted aluminium heat sinks for effective cooling. Hirose DF63 series connectors rated for 630VDC were selected for vibration-resistant connections; the series is rated for sinusoidal vibration of 10 to 55 Hz at 0.75 mm half-amplitude and shock resistance of 490 m/s² (approximately 50g) for 11 ms — appropriate for the tractive battery enclosure mounting location on the rigid carbon fibre monocoque chassis and representative of the vibration envelope tested under ISO 16750-3 automotive environmental standards. A full connector suitability justification referencing measured vehicle g-levels is provided in <a href='./tb-pdm-verification'>Section 6</a>. Refer to <a href='https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/appendix.html#d' target='_blank'>Appendix D</a> for component calculations, simulation setup and truth table.
 </p>
 
 <center><img src='./Figures/26 Precharge-Discharge PCB Front View.png'></center>
@@ -30,7 +30,7 @@ Humiseal 1B73 conformal coat is applied for electrical isolation, maintaining a 
 
 ## Testing Methodology
 <p style='text-align: justify'>
-Following the diagnosis from R25Evo that Precharge resistors failed due to insufficient heat dissipation, a controlled test was conducted to evaluate the thermal performance of two candidate resistors: a 1.5kΩ through-hole resistor (used in R25Evo) and a 3.3kΩ chassis mount resistor (proposed for R26E). The objective was to determine which resistor can reliably withstand the full TS voltage range without exceeding its thermal limits.
+Following the diagnosis from R25Evo that Precharge resistors failed due to insufficient heat dissipation, a controlled test was conducted to evaluate the thermal performance of two candidate resistors: a 1.5kΩ through-hole resistor (a candidate to replace the failed 1.5kΩ SMD resistor from R25 and R25Evo) and a 3.3kΩ chassis mount resistor (proposed for R26E). The objective was to determine which resistor can reliably withstand the full TS voltage range without exceeding its thermal limits.
 </p>
 
 <center><img src='./Figures/Resistor Test Setup.jpg'></center>
@@ -198,7 +198,22 @@ The actual time to 90% was determined from the logged data. The steady-state vol
 Despite the significant discrepancy, the actual average power dissipation of 16.62W remains <b>below the continuous power rating of 20W</b> for the 3.3kΩ chassis mount Precharge resistor, confirming safe operation. Potential reasons for the discrepancy are: Inverter internal circuitry drawing current from the DC bus during Precharge, parasitic resistance in wiring and connectors altering the effective RC time constant, voltage-dependent bus capacitance deviating from the fixed 650μF used in the ESF model, and lower actual TS voltage of 345.3V compared to the 356V used in the ESF calculation (refer to <a href='https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/appendix.html#e' target='_blank'>Appendix E</a> for detailed analysis).
 </p>
 
-## Precharge Sequence Timing
+## Precharge & Discharge Sequence Timing
+
+### Precharge Sequence Timing
+<p style='text-align: justify'>
+The Precharge duration is governed by the RC time constant. The ESF-calculated time for the Inverter DC bus voltage to reach 90% of the Tractive System voltage is:
+</p>
+
+<center>t<sub>90%</sub> = −ln(0.1) × R × C = −ln(0.1) × 3300 × 650 × 10⁻⁶ = <b>4.94s</b></center>
+
+<br>
+
+<p style='text-align: justify'>
+The actual time to 90% measured from logged data was <b>6.18s</b>, as determined in the Power Dissipation Analysis above. Refer to <a href='https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/appendix.html#e' target='_blank'>Appendix E</a> for a detailed analysis of the discrepancy.
+</p>
+
+### Discharge Sequence Timing
 <p style='text-align: justify'>
 FSAE rule EV.7.2.2 states that the discharge time must be less than 5 seconds.
 </p>
@@ -212,7 +227,7 @@ FSAE rule EV.7.2.2 states that the discharge time must be less than 5 seconds.
 
 ## Resistor Selection
 <p style='text-align: justify'>
-Based on the comprehensive testing conducted, the <b>3.3kΩ chassis mount resistor</b> has been selected as the Precharge resistor for R26E. It demonstrated thermal stability with only a 10°C temperature rise at 360V, compared to the 1.5kΩ through-hole resistor which failed at 300V. Its actual average power dissipation of 16.62W is within the 20W continuous rating, the discharge time of 4.29s satisfies EV.7.2.2, and the chassis mount form factor enables direct thermal coupling to a heat sink, addressing the root cause of R25Evo's failure.
+Based on the comprehensive testing conducted, the <b>3.3kΩ chassis mount resistor</b> has been selected as the Precharge resistor for R26E. It demonstrated thermal stability with only a 10°C temperature rise at 360V, compared to the 1.5kΩ candidate which failed at 300V — below the maximum TS voltage of 356V, confirming it could not pass the maximum TS voltage test. Its actual average power dissipation of 16.62W is within the 20W continuous rating, the discharge time of 4.29s satisfies EV.7.2.2, and the chassis mount form factor enables direct thermal coupling to a heat sink, addressing the root cause of R25Evo's failure.
 </p>
 
 <p style='text-align: justify'>

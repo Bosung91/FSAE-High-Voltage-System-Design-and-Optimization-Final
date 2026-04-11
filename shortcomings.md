@@ -17,7 +17,7 @@ Temperature monitoring during the resistor iteration test relied on a single the
 
 ## SPICE Simulation Validation
 <p style='text-align: justify'>
-Altium Designer SPICE simulation was used for the first time during this project. The simulation predicted an average power of 10.8W, while the actual measured value was 16.62W. Real-life validation must continue to determine the simulation's reliability for future design iterations.
+Altium Designer SPICE simulation was used for the first time during this project. The simulation predicted an average power of 10.8W, while the actual measured value was 16.62W. Critically, the SPICE simulation was conducted using the 1.5kΩ resistor configuration (refer to <a href='https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/appendix.html#d' target='_blank'>Appendix D</a>), not the 3.3kΩ resistor selected for R26E. The predicted 10.8W and actual 16.62W are therefore not directly comparable as they correspond to different resistor values and circuit configurations. The simulation must be re-run with the 3.3kΩ resistor to establish a valid baseline for future design validation.
 </p>
 
 ---
