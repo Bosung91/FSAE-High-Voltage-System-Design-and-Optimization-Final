@@ -261,5 +261,20 @@ During a subsequent test run on the vehicle, a precharge fault was traced to a l
 
 <br>
 
+### Precharge Resistor Temperature Monitoring
+<p style='text-align: justify'>
+Precharge resistor temperature was logged by attaching a thermistor to its body. <i>Figures 29 and 30</i> show that the temperature of the precharge resistor stayed the same at ambient temperature of 34°C throughout the precharge sequence, indicating no thermal buildup under the tested conditions.
+</p>
+
+<center><img src='./Figures/PC Resistor Start.png'></center>
+<center><i>Figure 29: Precharge Resistor Temperature at Start of Precharge Sequence</i></center>
+
+<br>
+
+<center><img src='./Figures/PC Resistor End.png'></center>
+<center><i>Figure 30: Precharge Resistor Temperature at End of Precharge Sequence</i></center>
+
+<br>
+
 ---
 [Previous Section: R25Evo](r25evo.md) | [Table of Contents](https://bosung91.github.io/FSAE-High-Voltage-System-Design-and-Optimization-Final/#table-of-contents) | [Next: TB PDM Verification](tb-pdm-verification.md)

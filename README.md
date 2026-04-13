@@ -35,3 +35,6 @@ Suh Bosung (A0258007H)
 9. [Future Work](future-work.md)
 10. [References](references.md)
 11. [Appendix](appendix.md)
+
+## AI Tool Declaration
+I used Claude (Anthropic) to format and build this website, including structuring the layout, navigation, and styling. I am responsible for the content and quality of the submitted work.

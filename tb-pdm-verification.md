@@ -11,7 +11,7 @@ The primary purpose of the TB PDM PCB is to distribute power and signals within 
 </p>
 
 <center><img src='./Figures/Tractive Battery PDM PCB Schematic.png'></center>
-<center><i>Figure 29: 26 TB PDM PCB Schematic</i></center>
+<center><i>Figure 31: 26 TB PDM PCB Schematic</i></center>
 
 <br>
 
@@ -20,7 +20,7 @@ R25Evo stopped approximately 20 times due to loose wire harness connections. Hir
 </p>
 
 <center><img src='./Figures/Tractive Battery PDM PCB Front.png'></center>
-<center><i>Figure 30: 26 TB PDM PCB Front View</i></center>
+<center><i>Figure 32: 26 TB PDM PCB Front View</i></center>
 
 ### Connector Selection Justification: Hirose DF63
 <p style='text-align: justify'>
@@ -36,7 +36,7 @@ Logged accelerometer data from recent vehicle runs recorded a maximum of 2.64g a
 </p>
 
 <center><img src='./Figures/R26E G-level.png'></center>
-<center><i>Figure 31: R26E Chassis G-level Logged During Test Run (max 2.64g)</i></center>
+<center><i>Figure 33: R26E Chassis G-level Logged During Test Run (max 2.64g)</i></center>
 
 <br>
 
@@ -59,26 +59,26 @@ To verify the effectiveness of the redesigned 26 TB PDM with Hirose DF63 series 
 </p>
 
 <center><img src='./Figures/R26E Test Run Logged Data.png'></center>
-<center><i>Figure 32: Precharge Signal Logged Data from Most Recent Test Run</i></center>
+<center><i>Figure 34: Precharge Signal Logged Data from Most Recent Test Run</i></center>
 
 <br>
 
 <p style='text-align: justify'>
-As shown in <i>Figure 32</i>, no fluctuation was observed throughout the test run. The signal remained stable at either 13.8V (HIGH) or 0V (LOW), confirming that the Hirose DF63 series connectors have effectively resolved the signal oscillation issue experienced during R25Evo test runs.
+As shown in <i>Figure 34</i>, no fluctuation was observed throughout the test run. The signal remained stable at either 13.8V (HIGH) or 0V (LOW), confirming that the Hirose DF63 series connectors have effectively resolved the signal oscillation issue experienced during R25Evo test runs.
 </p>
 
 ### Voltage Drop between Input and Output
 <p style='text-align: justify'>
-Voltage drop testing was conducted across all signal and power paths on the 26 TB PDM to verify efficient distribution. An external power supply was configured at 12V and 3A to simulate the Grounded Low Voltage (GLV) power source, as shown in <i>Figure 33</i>.
+Voltage drop testing was conducted across all signal and power paths on the 26 TB PDM to verify efficient distribution. An external power supply was configured at 12V and 3A to simulate the Grounded Low Voltage (GLV) power source, as shown in <i>Figure 35</i>.
 </p>
 
 <center><img src='./Figures/External Power Supply Setup (Channel 1).jpg'></center>
-<center><i>Figure 33: External Power Supply Setup (Channel 1)</i></center>
+<center><i>Figure 35: External Power Supply Setup (Channel 1)</i></center>
 
 <br>
 
 <center><img src='./Figures/IO Voltage Drop Test Setup.jpg'></center>
-<center><i>Figure 34: Voltage Drop Test Setup</i></center>
+<center><i>Figure 36: Voltage Drop Test Setup</i></center>
 
 <br>
 
@@ -149,7 +149,7 @@ Voltage drop testing was conducted across all signal and power paths on the 26 T
 </tbody>
 </table>
 </center>
-<center><i>Figure 35: Voltage Drop between Input and Output</i></center>
+<center><i>Figure 37: Voltage Drop between Input and Output</i></center>
 
 <br>
 
@@ -163,22 +163,22 @@ To verify the rectifier diodes' effectiveness, a reversed 12V polarity test was 
 </p>
 
 <center><img src='./Figures/BMS Ready Reversed Polarity.jpg'></center>
-<center><i>Figure 36: BMS Ready Reversed Polarity</i></center>
+<center><i>Figure 38: BMS Ready Reversed Polarity</i></center>
 
 <br>
 
 <center><img src='./Figures/THERM PWR Reversed Polarity.jpg'></center>
-<center><i>Figure 37: THERM PWR Reversed Polarity</i></center>
+<center><i>Figure 39: THERM PWR Reversed Polarity</i></center>
 
 <br>
 
 <center><img src='./Figures/FAN PWR Reversed Polarity.jpg'></center>
-<center><i>Figure 38: FAN PWR Reversed Polarity</i></center>
+<center><i>Figure 40: FAN PWR Reversed Polarity</i></center>
 
 <br>
 
 <p style='text-align: justify'>
-As shown in <i>Figures 36 to 38</i>, the rectifier diodes successfully blocked reverse current flow in all tested paths, confirming that the GLV battery and other connected components are protected from accidental reverse polarity.
+As shown in <i>Figures 38 to 40</i>, the rectifier diodes successfully blocked reverse current flow in all tested paths, confirming that the GLV battery and other connected components are protected from accidental reverse polarity.
 </p>
 
 ### Shutdown Line Diagnostic LEDs
@@ -187,17 +187,17 @@ Shutdown Line diagnostic LEDs were added to the 26 TB PDM to provide visual feed
 </p>
 
 <center><img src='./Figures/R26E Testbench.jpg'></center>
-<center><i>Figure 39: R26E Testbench</i></center>
+<center><i>Figure 41: R26E Testbench</i></center>
 
 <br>
 
 <center><img src='./Figures/26 TB PDM SDL LEDs.jpg'></center>
-<center><i>Figure 40: 26 TB PDM Shutdown Line LEDs</i></center>
+<center><i>Figure 42: 26 TB PDM Shutdown Line LEDs</i></center>
 
 <br>
 
 <p style='text-align: justify'>
-As shown in <i>Figure 40</i>, the Shutdown Line LEDs work as intended. Wiring up the R26E Shutdown Line on the testbench successfully lit all the LEDs, enabling the team to quickly identify Shutdown Line faults, significantly reducing troubleshooting time compared to R25Evo.
+As shown in <i>Figure 42</i>, the Shutdown Line LEDs work as intended. Wiring up the R26E Shutdown Line on the testbench successfully lit all the LEDs, enabling the team to quickly identify Shutdown Line faults, significantly reducing troubleshooting time compared to R25Evo.
 </p>
 
 ---
