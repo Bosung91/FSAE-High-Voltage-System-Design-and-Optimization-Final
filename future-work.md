@@ -7,7 +7,7 @@ title: Future Work
 
 ## R26E Test Run
 <p style='text-align: justify'>
-R26E test runs will be conducted to further validate the stability of wire harness connections to HV PCBs using the Hirose DF63 series connectors, and to log Precharge resistor operating temperature using a thermistor to validate the effectiveness of the redesigned 26 Precharge-Discharge PCB with chassis mount resistors and directly mounted heat sinks.
+R26E test runs will be conducted to further validate the stability of wire harness connections to HV PCBs using the Hirose DF63 series connectors. Although initial temperature monitoring data showed the Precharge resistor remaining at ambient temperature throughout a single Precharge sequence, repeated Precharge sequences and sustained temperature logging are needed to confidently validate that the resistor is not overheating during operation. A larger sample of test runs across varying TS voltage levels and ambient conditions is required before the thermal performance of the redesigned 26 Precharge-Discharge PCB with chassis mount resistors and directly mounted heat sinks can be conclusively validated.
 </p>
 
 ## ESF Model Refinement
